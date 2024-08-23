@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { remove } from "../store/cartSlice";
+import { remove } from "../Store/cartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -63,13 +63,13 @@ const Cart = () => {
           <Card.Body>
             <Card.Title>{product.title}</Card.Title>
             <Card.Text>
-              Current Price: <i class="fa fa-inr"></i>
+              Current Price: <i className="fa fa-inr"></i>
               {product.price}
             </Card.Text>
             <div className="InDe">
               <div className="price-total">
                 <Card.Text className="card-text">
-                  Subtotal of product price:<i class="fa fa-inr"></i>{" "}
+                  Subtotal of product price:<i className="fa fa-inr"></i>{" "}
                   {product.price * productCount[product.id] || product.price}
                 </Card.Text>
               </div>
@@ -113,7 +113,7 @@ const Cart = () => {
       <div className="text-white">
         <span style={{ fontSize: 30 }}>My Cart</span> <br />
         <span style={{ fontSize: 30 }}>
-          Grand Total:<i class="fa fa-inr"></i> {calculateTotalPrice()}
+          Grand Total:<i className="fa fa-inr"></i> {calculateTotalPrice()}
         </span>
         {products.length === 0 && (
           <div className="NoItems">

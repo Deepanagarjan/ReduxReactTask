@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
-import { add, remove } from "../store/cartSlice";
+import { add, remove } from "../Store/cartSlice";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const Products = () => {
